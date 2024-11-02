@@ -1,0 +1,9 @@
+{
+  "files": ["**", ".*/**"],
+  "ignorePaths": [
+    ".git",
+    ".gitignore",
+    ".venv"
+  ],
+  "words": ["pyluxe", "paɪˈlʌksɪ"]
+}

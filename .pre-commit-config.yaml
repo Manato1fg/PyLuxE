@@ -7,3 +7,15 @@ repos:
         args: ["--fix", "--config", "pyproject.toml"]
       # Run the formatter.
       - id: ruff-format
+  - repo: https://github.com/streetsidesoftware/cspell-cli
+    rev: v8.15.2
+    hooks:
+      - id: cspell
+        files: \.(md|py)$
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v5.0.0
+    hooks:
+      - id: trailing-whitespace
+      - id: end-of-file-fixer
+      - id: check-yaml
+      - id: check-added-large-files
