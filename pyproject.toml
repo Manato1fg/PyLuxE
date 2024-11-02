@@ -1,10 +1,11 @@
 [project]
-name = "onn"
+name = "PyLuxE"
 version = "0.1.0"
-description = "Foundation for Optical Neural Networks (ONN) research."
+description = "PyLuxE is a Python library for optical networks."
 readme = "README.md"
 requires-python = ">=3.10"
 dependencies = [
+    "matplotlib>=3.9.2",
     "numpy==1.26.4",
     "opencv-python>=4.10.0.84",
     "ruff>=0.6.9",
@@ -17,7 +18,7 @@ include = ["*.py"]
 exclude = [".venv"]
 line-length = 79
 
-select = [
+lint.select = [
   "C9",
   "E",
   "F",
@@ -25,9 +26,9 @@ select = [
   "I",
 ]
 
-[tool.ruff.isort]
+[tool.ruff.lint.isort]
 combine-as-imports = true
-known-first-party = ["onn"]
+known-first-party = ["pyluxe"]
 section-order = ["future", "standard-library", "third-party", "first-party", "local-folder"]
 split-on-trailing-comma = true
 
